@@ -1,0 +1,23 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void) 
+{
+	int num1;
+	int num2;
+	char forename;
+	printf("Enter two integers: ");
+	scanf("%d %d", &num1, &num2);
+	
+	int sum = num1 + num2;
+	
+	//Outputs the sum of the inputs
+	printf("%d\n", sum);
+	
+}
+
+//Prints the user's name
+void greetUser(char name[]) 
+{
+	printf("%s\n",name);
+}
