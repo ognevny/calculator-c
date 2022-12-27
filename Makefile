@@ -3,3 +3,5 @@ default:
 run:
 	cc main.c -o program
 	./program
+tcc:
+	tcc main.c -o tccprogram
