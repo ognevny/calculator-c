@@ -1,2 +1,2 @@
 default:
-	cc main.c -o calculator
+	cc calculator.c -o bin/calculator
