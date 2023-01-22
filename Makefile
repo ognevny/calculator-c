@@ -1,8 +1,8 @@
 default:
-	cc calculator.c -o bin/calculator
+	cc calculator.c -o calculator
 run:
-	cc calculator.c -o bin/calculator
-	bin/calculator
+	cc calculator.c -o calculator
+	./calculator
 
-oldcalc:
-	cc calculator.old.c -o bin/oldcalc
+old:
+	cc calculator.old.c -o oldcalculator
