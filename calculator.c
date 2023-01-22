@@ -1,67 +1,54 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-//Badly written calculator.
-//I will refactor it with switch statements eventually.
-int main() {
-	printf("What do you want to do?\n");
-	printf("\nadd\nsubtract\nmultiply\ndivide\nexit\n");
+#include <string.h>
+#include <signal.h>
 
-	char input[8];
-	scanf("%s",input);	
+void catch_int(int sig_num) 
+{	//Catches UNIX SIGINT (ctrl+c)
+    signal(SIGINT, catch_int);
+    printf("\n\nCaught UNIX SIGINT, exiting.\n");
+	fflush(stdout);
+	exit(1);
+}
+
+int main() 
+{	//Awaits UNIX SIGINT (ctrl+c)
+	signal(SIGINT, catch_int); 
+
+	char operator[1];	
+	int number1; 		
+	int number2;	
 	
-	if (strcmp(input, "add") == 0) {
-		add();
-	} 
-	else if (strcmp(input, "subtract") == 0 ) {
-		subtract();	
-	}
-	else if (strcmp(input, "multiply") == 0 ) {
-		multiply();	
-	}
-	else if (strcmp(input, "divide") == 0 ) {
-		divide();	
-	}
-	else if (strcmp(input, "exit") == 0 ) {
-		printf("Exited with exit(1)");
-		exit(1);	
-	}
-	else {
-		printf("Invalid input\n");
-	}
-
-}
-int add(int num1, int num2) {
-	printf("Enter two integers: ");
-	scanf("%d %d", &num1, &num2);
+	//enter an expression. eg: "5 + 4"
+	printf("Enter expression: ");
+	scanf("%d",&number1);
+	scanf("%s",operator);
+	scanf("%d",&number2);
+	printf("%d %s %d",number1,operator,number2);
 	
-	int sum = num1 + num2;
-	printf("%d\n", sum);
-	 main();
-}
-
-int subtract(int num1, int num2){
-	printf("Enter two integers: ");
-	scanf("%d %d", &num1, &num2);
-
-	int difference = num1 - num2;
-	printf("%d\n",difference);
-	 main();
-}
-
-int multiply(int num1, int num2) {
-	printf("Enter two integers:");
-	scanf("%d %d", &num1, &num2);
-	
-	int product = num1 * num2;
-	printf("%d\n",product);
-	 main();
-}
-
-int divide(int num1, int num2) {
-	printf("Enter two integers: ");
-	scanf("%d %d", &num1,&num2);
-
-	float quotient = num1 / num2;
-	printf("%f\n",quotient);
+	//loop to determine operator
+	if (strcmp(operator, "+") == 0) 
+	{ 		//if operator is add
+		int sum = number1 + number2;
+		printf(" = %d\n", sum);
+		main();
+	}
+	else if (strcmp(operator, "-") == 0) 
+	{	//if operator is subtract
+		int difference = number1 - number2;
+		printf(" = %d\n",difference);
+	 	main();
+	}
+	else if (strcmp(operator, "*") == 0) 
+	{	//if operator is multiply
+		int product = number1 * number2;
+		printf(" = %d\n",product);
+	 	main();
+	}
+	else if (strcmp(operator, "/") == 0) 
+	{	//if operator is multiply
+		int quotient = number1 / number2;
+		printf(" = %d\n",quotient);
+	 	main();
+	}
 }
