@@ -1,2 +1,3 @@
 # calculator-c
-Kieran's basic arithmetic calculator written in C.
+Kieran's basic calculator written in C.
+
