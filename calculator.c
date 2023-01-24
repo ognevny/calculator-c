@@ -6,8 +6,9 @@
 void catch_int(int sig_num) {
     signal(SIGINT, catch_int);
     printf("\n\nCaught UNIX SIGINT\n");
-	fflush(stdout);
-	exit(1);
+    fflush(stdout);	
+    exit(1);
+
 }
 
 int main() {	
@@ -44,3 +45,4 @@ int main() {
 	 	main();
 	}
 }
+
