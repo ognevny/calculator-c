@@ -1,3 +1,2 @@
 # calculator-c
-Extremely simple calculator written in C. 
-
+Kieran's basic arithmetic calculator written in C.
