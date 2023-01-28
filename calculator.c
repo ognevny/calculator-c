@@ -3,7 +3,8 @@
 #include <string.h>
 #include <signal.h>
 
-void catch_int(int sig_num) {
+void catch_int(int sig_num) 
+{
     signal(SIGINT, catch_int);
     printf("\n\nCaught UNIX SIGINT\n");
     fflush(stdout);	
@@ -11,7 +12,8 @@ void catch_int(int sig_num) {
 
 }
 
-int main() {	
+int main() 
+{	
 	signal(SIGINT, catch_int); 
 
 	char operator[1];	
