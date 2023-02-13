@@ -6,7 +6,7 @@
 void catch_int(int sig_num) 
 {
     signal(SIGINT, catch_int);
-    printf("\n\nCaught UNIX SIGINT\n");
+    printf("\n\nCaught Control-C SIGINT\n");
     fflush(stdout);	
     exit(1);
 
