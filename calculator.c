@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 			exit(1);
 		}
 		if (strcmp(argv[1],"-r") == 0) {
+			printf("Attempting to open default browser (xdg-open)\n");
 			system("xdg-open https:/github.com/kierancrossland/calculator-c");
 			exit(1);
 		} 
