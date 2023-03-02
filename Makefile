@@ -3,5 +3,7 @@ default:
 
 
 clean:
-	rm -rf calculator-c pkg src calculator calculator.exe
+	rm -rf calculator calculator.exe
+
+
 	
