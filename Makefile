@@ -1,6 +1,7 @@
 default:
 	cc calculator.c -o calculator
 
-archlinux:
-	makepkg -si --noconfirm
+
+clean:
+	rm -rf calculator-c pkg src calculator calculator.exe
 	
