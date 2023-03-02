@@ -2,7 +2,6 @@
 pkgname=calculator-c
 pkgver=1.0
 pkgrel=1
-pkgrel=1
 pkgdesc="A simple arithmetic calculator written in C."
 arch=('i686' 'pentium4' 'x86_64' 'arm' 'armv7h' 'armv6h' 'aarch64')
 url="https://github.com/KieranCrossland/calculator-c"
@@ -21,6 +20,5 @@ build () {
 package() {
   cd "$srcdir/$pkgname"
   install -Dm0755 -t "$pkgdir/usr/bin/" "calculator"
-  echo "Thanks for installing my software, you can contact me at www.kieranc.xyz!"
 }
 
