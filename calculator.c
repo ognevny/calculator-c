@@ -14,8 +14,6 @@ void catch_int(int sig_num)
 
 int main(int argc, char *argv[])
 {
-	signal(SIGINT, catch_int); 
-
     if (argc > 1)
     {
         if (strcmp(argv[1],"-v") == 0) {
