@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     if (argc > 1)
     {
         if (strcmp(argv[1],"-v") == 0) {
-			printf("Version: 1.1\n");
+			printf("Version: 0.3 (DEVELOPMENT)\n");
 			exit(1);
 		}
 		if (strcmp(argv[1],"-r") == 0) {
