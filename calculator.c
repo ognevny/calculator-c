@@ -23,27 +23,37 @@ int main(int argc, char *argv[])
 		if (strcmp(argv[1],"-r") == 0) {
 			printf("Attempting to open default browser (xdg-open)\n");
 			system("xdg-open https:/github.com/kierancrossland/calculator-c");
-			exit(1);
+			exit(EXIT_SUCCESS);
 		} 
 		if (strcmp(argv[1],"-w") == 0) {
 			printf("Attempting to open default browser (xdg-open)\n");
 			system("xdg-open https://www.kieranc.xyz");
-			exit(1);
+			exit(EXIT_SUCCESS);
 		}
 		if (strcmp(argv[1],"-m") == 0) {
 			printf("Attempting to open default Email client (xdg-email)\n");
 			system("xdg-email mailto:kierancrossland1st@gmail.com");
-			exit(1);
+			exit(EXIT_SUCCESS);
 		}
 		if (strcmp(argv[1],"-h") == 0) {
-			printf("  -v\tPrints the version information\n");
-			printf("  -r\tOpens the program's Git repository\n");
-			printf("  -w\tOpens the programmer's website\n");
-			printf("  -m\tEmails the programmer (kierancrossland1st@gmail.com)\n");
-			exit(1);
+			help_arg();
+			exit(EXIT_SUCCESS);
+		}
+		else {
+			printf("Error! Invalid argument \"%s\" ",argv[1]);
+			help_arg();
+			exit(EXIT_FAILURE);
 		}
 }
 	calculator();
+}
+int help_arg() 
+{
+	printf("Avaliable arguments:\n");
+	printf("  -v\tPrints the version information\n");
+	printf("  -r\tOpens the program's Git repository\n");
+	printf("  -w\tOpens the programmer's website\n");
+	printf("  -m\tEmails the programmer (kierancrossland1st@gmail.com)\n");
 }
 
 int calculator()  
@@ -81,4 +91,3 @@ int calculator()
 	 	calculator();
 	}
 }
-
