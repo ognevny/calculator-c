@@ -15,7 +15,8 @@ Clone this repository and inside it run this command:
 
 ``make``
 
-Then run this as root (sudo or doas)
+Then run this as root: (sudo or doas)
+
 ``sudo make install``
 
 ### Installing on Windows (Not recommended)
