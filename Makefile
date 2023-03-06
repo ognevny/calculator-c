@@ -1,12 +1,12 @@
 default:
-	cc src/calculator.c -o calculator
+	cc src/calculator.c -o bin/calculator
 
 clean:
-	rm -rf calculator calculator.exe
+	rm -rf bin/calculator bin/calculator.exe
 
 install:
-	chmod +x calculator
-	cp calculator /usr/local/bin/
+	chmod +x bin/calculator
+	cp bin/calculator /usr/local/bin/
 	which calculator
 	
 uninstall:

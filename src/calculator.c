@@ -14,11 +14,14 @@ void catch_int(int sig_num)
 
 int main(int argc, char *argv[])
 {
+	const char NAME[] = "calculator";
+	const float VERSION = 0.3;
+
     if (argc > 1)
     {
         if (strcmp(argv[1],"-v") == 0) {
-			printf("Version: 0.3 (DEVELOPMENT)\n");
-			exit(1);
+		printf("%s %f",NAME, VERSION);
+			exit(EXIT_SUCCESS);
 		}
 		if (strcmp(argv[1],"-r") == 0) {
 			printf("Attempting to open default browser (xdg-open)\n");
