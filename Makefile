@@ -1,4 +1,5 @@
 default:
+	mkdir bin &
 	cc src/calculator.c -o bin/calculator
 
 clean:
