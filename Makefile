@@ -3,7 +3,8 @@ default:
 	cc src/calculator.c -o bin/calculator
 
 clean:
-	rm -rf bin 
+	rm -rf bin
+	mkdir bin &
 
 install:
 	chmod +x bin/calculator
