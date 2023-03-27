@@ -4,8 +4,6 @@ default:
 
 clean:
 	rm -rf bin
-	mkdir bin &
-
 install:
 	chmod +x bin/calculator
 	cp bin/calculator /usr/local/bin/
