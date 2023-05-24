@@ -10,10 +10,4 @@ install:
 uninstall:
 	rm /usr/local/bin/calculator
 
-kieranpkg_install:
-	cp bin/calculator /usr/local/bin/
 
-kieranpkg_uninstall:
-	rm /usr/local/bin/calculator
-
-kieranpkg_create:
